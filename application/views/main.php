@@ -32,7 +32,7 @@
                     </span>
                     <span class="glyphicon glyphicon-user">
                     </span>
-                    Actors Connections
+                    actors-connections.net
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
