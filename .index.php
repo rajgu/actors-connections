@@ -39,7 +39,7 @@ if (defined('ENVIRONMENT'))
 		case 'testing':
 		case 'production':
 			error_reporting(0);
-			ini_set (1);
+            ini_set('display_errors', 0);
 		break;
 
 		default:
