@@ -46,6 +46,7 @@ class Ajax extends CI_Controller {
 				$output = array (
 					'status'	=> 'ok',
 					'text'		=> "Thanks for sharing Your fought's",
+					'captcha'	=> $new_captcha['image'],
 				);
 				$this->output
 				    ->set_content_type ('application/json')
