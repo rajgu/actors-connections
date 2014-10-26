@@ -8,12 +8,13 @@ class Ajax extends CI_Controller {
 
 	public function contact () {
 
-		$config = $this->config->item ('email_box');
+		$config  = $this->config->item ('email_box');
 		$name    = $this->input->post ('name');
 		$email   = $this->input->post ('email');
 		$message = $this->input->post ('message');
 		$captcha = $this->input->post ('captcha');
-		$code = $this->session->userdata ('captcha');
+		$code    = $this->session->userdata ('captcha');
+
 		$this->load->model ('captcha');
 		$new_captcha = $this->captcha->create ();
 		$this->session->set_userdata (array ('captcha' => $new_captcha['word']));
