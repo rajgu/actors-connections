@@ -71,8 +71,8 @@
                         <div class="separator" style="margin:40px;">
                         </div>
                         <div class="input-group">
-                          <span class="glyphicon glyphicon-user input-group-addon"> Actor #2 </span>
-                          <input type="text" class="form-control" placeholder="Enter Name" id="actor2">
+                            <span class="glyphicon glyphicon-user input-group-addon"> Actor #2 </span>
+                            <input type="text" class="form-control" placeholder="Enter Name" id="actor2">
                         </div>
                         <h2> and...</h2>
                         <button id="Search" class="btn btn-primary">PRESS HERE</button>
@@ -111,7 +111,7 @@
                     Everyone and everything is six or fewer steps away, by way of introduction, from any other person in the world, so that a chain of "a friend of a friend" statements can be made to connect any two people in a maximum of six steps. <a id="link_2" href="#">[2]</a>
                     </blockquote>
                     <p class="lead">
-                        This WebSite is a Proof-Of-Concept to this theory. Database contains over 2 000 000 actors and actresses. Conections among them are made based on movies they played.
+                        This WebSite is a Proof-Of-Concept to this theory. Database contains over 2 500 000 actors and actresses. Conections among them are made based on movies they played.
                     </p>
                 </div>
             </div>
