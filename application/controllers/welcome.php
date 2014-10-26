@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
 			'links'		=> $this->stats->countLinks (),
 		);
 
-		$this->load->view('main', array (
+		$this->load->view ('main', array (
 			'captcha'	=> $captcha['image'],
 			'stats'		=> $stats,
 			)
