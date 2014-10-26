@@ -1,0 +1,16 @@
+# Wykluczenie pliku konfigurającego bazy danych
+/application/config/database.php
+# Wykluczenie index.php
+/index.php
+
+# Wykluczenie importera:
+/importer/*
+!/importer/importer.php
+!/importer/.config.php
+!/importer/database.sql
+!/importer/index.html
+
+# Wykluczenie tokenów captchy
+/public/captcha/*
+!/public/captcha/index.html
+
