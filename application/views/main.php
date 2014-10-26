@@ -138,7 +138,7 @@
                         <p class="lead"><b>
                             <?php echo number_format ($stats['links'], 0, ' ', ' '); ?></b> Links;
                         </p>
-                    <h2 class="section-heading">Some Explenation:</h2>
+                    <h2 class="section-heading">Legend:</h2>
                         <p class="lead">
                             <span class="stats stats_queries"></span>
                             Total Queries
