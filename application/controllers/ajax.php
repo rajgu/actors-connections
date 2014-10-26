@@ -8,7 +8,6 @@ class Ajax extends CI_Controller {
 
 	public function contact () {
 
-		$config  = $this->config->item ('email_box');
 		$name    = $this->input->post ('name');
 		$email   = $this->input->post ('email');
 		$message = $this->input->post ('message');
@@ -24,7 +23,7 @@ class Ajax extends CI_Controller {
 			! $captcha OR
 			($captcha AND strtolower ($captcha) != strtolower ($code))
 		) {
-			$errors[] = 'Please, enter captcha as on image';
+			$errors[] = 'Please, enter code as on image';
 		}
 		if ( ! $name) {
 			$errors[] = 'Please, enter your name';
@@ -34,15 +33,16 @@ class Ajax extends CI_Controller {
 		}
 
 		if (empty ($errors)) {
-			$this->load->library ('email', $config);
-			$this->email->to ('rajgu85@gmail.com');
-			$this->email->from ('Contact-Form', $config['smtp_user']);
-			$this->email->subject ('[AC] - From "' . $name . '"');
-			$this->email->message ('Email: "' . $email . '"<br /><br />' . $message);
-			if ( ! $this->email->send ()) {
+			$this->load->helper ('email');
+			$status = send_email (
+				'rajgu85@gmail.com',
+				'[AC] - From "' . $name . '"',
+				'Email: "' . $email . '"<br /><br />' . $message
+			);
+
+			if ( ! $status) {
 				$errors[] = "I'm very sorry, there's something wrong with all those emails...";
 			} else {
-				print ('asdfadsfas');
 				$output = array (
 					'status'	=> 'ok',
 					'text'		=> "Thanks for sharing Your fought's",

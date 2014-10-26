@@ -360,10 +360,10 @@ $config['proxy_ips'] = '';
 
 $config['email_box'] = array (
 		'protocol'	=> 'smtp',
-		'smtp_host'	=> 'xex.home.pl',
+		'smtp_host'	=> '',
 		'smtp_port'	=> 465,
-		'smtp_user'	=> 'connections@xex.home.pl', // change it to yours
-		'smtp_pass'	=> 'conn123', // change it to yours
+		'smtp_user'	=> '', // change it to yours
+		'smtp_pass'	=> '', // change it to yours
 		'mailtype'	=> 'html',
 		'charset'	=> 'iso-8859-2',
 		'wordwrap'	=> TRUE,
