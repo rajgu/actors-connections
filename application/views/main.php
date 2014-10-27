@@ -13,13 +13,14 @@
     <link href="<?php echo base_url('/public/css/font-awesome-4.1.0/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
-        <script src="<?php echo base_url('public/js/html5shiv.js'); ?>"></script>
-        <script src="<?php echo base_url('public/js/respond.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('public/js/html5shiv.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('public/js/respond.min.js'); ?>"></script>
     <![endif]-->
-    <script src="<?php echo base_url('public/js/jquery-1.11.0.js'); ?>"></script>
-    <script src="<?php echo base_url('public/js/jquery-ui.min.js'); ?>"></script>
-    <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
-    <script src="<?php echo base_url('public/js/bootstrap-dialog.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/js/jquery-1.11.0.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/js/jquery-ui.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/js/bootstrap-dialog.js'); ?>"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
