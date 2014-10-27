@@ -228,8 +228,8 @@ class Ajax extends CI_Controller {
 		imagettftext ($img, 22, 0, 370, 480, $colors['black'], $font, "Yesterday");
 		imagettftext ($img, 22, 0, 650, 480, $colors['black'], $font, "Last Week");
 
-		$this->output->set_content_type ('image/png');
-		    imagepng ($img);
+		header ('Content-Type: image/png');
+		imagepng ($img);
 	}
 
 }
