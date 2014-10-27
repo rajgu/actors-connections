@@ -276,22 +276,6 @@ function mysql_connect_me () {
 function mysql_create_tables () {
 
     make_query ("
-        DROP TABLE IF EXISTS `cache`;
-    ");
-
-    make_query ("
-        CREATE TABLE `cache` (
-            `id` int(11) NOT NULL AUTO_INCREMENT,
-            `actor1` int(11) NOT NULL,
-            `actor2` int(11) NOT NULL,
-            `used_cnt` int(11) NOT NULL,
-            `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-            `data` varchar(256) DEFAULT NULL,
-        PRIMARY KEY (`id`),
-        UNIQUE KEY `actors` (`actor1`,`actor2`)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8
-    ");
-    make_query ("
         DROP TABLE IF EXISTS `genries`;
     ");
     make_query ("
