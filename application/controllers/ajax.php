@@ -37,7 +37,7 @@ class Ajax extends CI_Controller {
 			$status = send_email (
 				'rajgu85@gmail.com',
 				'[AC] - From "' . $name . '"',
-				'Email: "' . $email . '"<br /><br />' . $message
+				'Email: "' . $email . "\"\n\n" . $message
 			);
 
 			if ( ! $status) {
