@@ -98,7 +98,7 @@ $(function(){
         if (IsRequest)
             return;
         show_wait ();
-        e.preventDefault(); // preventing default click action
+        e.preventDefault();
         $.ajax({
             url: 'ajax/validate',
             type: 'post',
@@ -106,7 +106,7 @@ $(function(){
                 actor1: $('#actor1').val(),
                 actor2: $('#actor2').val(),
             },
-            timeout: 15000,
+            timeout: 20000,
             success: function(data) {
                 hide_wait ();
                 var types = [];
@@ -116,7 +116,7 @@ $(function(){
                 if (typeof(data.status) == 'undefined') {
                     var data = [];
                     data.status  = 'error';
-                    data.text    = 'Congratulation u broke me...';
+                    data.text    = 'Something strange happened...';
                 }
                 if (data.status == 'ok') {
                     var content = '<div class="text-center">';
@@ -146,12 +146,13 @@ $(function(){
                         message: data.text
                     });
                 }
-            }, error: function(){
+            },
+            error: function(){
                 hide_wait ();
                 BootstrapDialog.show({
                     type: BootstrapDialog.TYPE_DANGER,
                     title: "Ehmmm...",
-                    message: 'Congratulation u broke me...'
+                    message: 'Something strange happened...'
                 });
             },
             })
@@ -161,7 +162,7 @@ $(function(){
 
 $(function(){
     $('#submit').on('click', function(e){
-        e.preventDefault(); // preventing default click action
+        e.preventDefault();
         $.ajax({
             url: 'ajax/contact',
             type: 'post',
@@ -183,12 +184,17 @@ $(function(){
                 } else {
                     BootstrapDialog.show({
                         type: BootstrapDialog.TYPE_WARNING,
-                        title: "Something wrong...",
+                        title: "Somethings wrong...",
                         message: data.text.join ('<br />'),
                     });
                 }
             },
             error: function() {
+                BootstrapDialog.show({
+                    type: BootstrapDialog.TYPE_WARNING,
+                    title: "Somethings wrong...",
+                    message: "",
+                });
             }
         })
     })
