@@ -218,9 +218,9 @@ class Ajax extends CI_Controller {
 			imagefilledrectangle ($img, 210 + (280 * $run), 450, 280 + (280 * $run), 80 + $height - $height_found, $colors['blue']);
 			imagerectangle ($img, 210 + (280 * $run), 450, 280 + (280 * $run), 80 + $height - $height_found, $colors['blue_border']);
 
-			imagettftext ($img, 22, 0,  50 + 35 - 4 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_queries, $colors['black'], $font, $stat['queries']);
-			imagettftext ($img, 22, 0, 130 + 35 - 1 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_cached, $colors['black'], $font, $stat['cached']);
-			imagettftext ($img, 22, 0, 210 + 35 + 2 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_found, $colors['black'], $font, $stat['found']);
+			imagettftext ($img, 22, 0,  50 + 35 - 4 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_queries, $colors['black'], $font, $stat['queries'] ? $stat['queries'] : 0);
+			imagettftext ($img, 22, 0, 130 + 35 - 1 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_cached, $colors['black'], $font, $stat['cached'] ? $stat['cached'] : 0);
+			imagettftext ($img, 22, 0, 210 + 35 + 2 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_found, $colors['black'], $font, $stat['found'] ? $stat['found'] : 0);
 
 			$run++;
 		}
