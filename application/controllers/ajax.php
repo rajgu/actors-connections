@@ -218,15 +218,19 @@ class Ajax extends CI_Controller {
 			imagefilledrectangle ($img, 210 + (280 * $run), 450, 280 + (280 * $run), 80 + $height - $height_found, $colors['blue']);
 			imagerectangle ($img, 210 + (280 * $run), 450, 280 + (280 * $run), 80 + $height - $height_found, $colors['blue_border']);
 
-			imagettftext ($img, 22, 0,  50 + 35 - 4 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_queries, $colors['black'], $font, $stat['queries'] ? $stat['queries'] : 0);
-			imagettftext ($img, 22, 0, 130 + 35 - 1 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_cached, $colors['black'], $font, $stat['cached'] ? $stat['cached'] : 0);
-			imagettftext ($img, 22, 0, 210 + 35 + 2 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 2 - $height_found, $colors['black'], $font, $stat['found'] ? $stat['found'] : 0);
+			$stat['queries'] = $stat['queries'] ? $stat['queries'] : 0;
+			$stat['cached']  = $stat['cached']  ? $stat['cached']  : 0;
+			$stat['found']   = $stat['found']   ? $stat['found']   : 0;
+
+			imagettftext ($img, 22, 0,  50 + 35 - 6 - ((strlen ($stat['queries']) - 1)  * 11) + ($run * 280), 450 - 4 - $height_queries, $colors['black'], $font, $stat['queries']);
+			imagettftext ($img, 22, 0, 130 + 35 - 6 - ((strlen ($stat['cached']) - 1)  * 11) + ($run * 280), 450 - 4 - $height_cached, $colors['black'], $font, $stat['cached']);
+			imagettftext ($img, 22, 0, 210 + 35 - 6 - ((strlen ($stat['found']) - 1)  * 11) + ($run * 280), 450 - 4 - $height_found, $colors['black'], $font, $stat['found']);
 
 			$run++;
 		}
-		imagettftext ($img, 22, 0, 124, 480, $colors['black'], $font, "Today");
-		imagettftext ($img, 22, 0, 370, 480, $colors['black'], $font, "Yesterday");
-		imagettftext ($img, 22, 0, 650, 480, $colors['black'], $font, "Last Week");
+		imagettftext ($img, 22, 0, 126, 480, $colors['black'], $font, "Today");
+		imagettftext ($img, 22, 0, 380, 480, $colors['black'], $font, "Yesterday");
+		imagettftext ($img, 22, 0, 656, 480, $colors['black'], $font, "Last Week");
 
 		header ('Content-Type: image/png');
 		imagepng ($img);
