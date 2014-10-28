@@ -99,8 +99,8 @@
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <p class="lead">
-                        In 1929 <b>Frigyes Karinthy</b> wrote: 
-                    </p> 
+                        In 1929 <b>Frigyes Karinthy</b> wrote:
+                    </p>
                     <blockquote>
                         Planet Earth has never been as tiny as it is now.
                         It shrunk - relatively speaking of course - due to the quickening pulse of both physical and verbal communication. <a id="link_1" href="#">[1]</a>
@@ -112,7 +112,7 @@
                     Everyone and everything is six or fewer steps away, by way of introduction, from any other person in the world, so that a chain of "a friend of a friend" statements can be made to connect any two people in a maximum of six steps. <a id="link_2" href="#">[2]</a>
                     </blockquote>
                     <p class="lead">
-                        This WebSite is a Proof-Of-Concept to this theory. Database contains over 2 500 000 actors and actresses. Conections among them are made based on movies they played.
+                        This WebSite is a Proof-Of-Concept to this theory. Database contains over 3 000 000 actors and actresses. Conections among them are made based on movies they played.
                     </p>
                 </div>
             </div>
