@@ -244,6 +244,9 @@
             </div>
         </div>
     </footer>
+
     <script src="<?php echo base_url('public/js/custom.js'); ?>"></script>
+    <script src="<?php echo base_url('public/js/cookies-consent.js'); ?>"></script>
+
 </body>
 </html>
